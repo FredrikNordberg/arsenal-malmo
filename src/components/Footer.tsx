@@ -4,16 +4,18 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-black text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Logotyp och tagline */}
-        <div className="h-20 w-20 relative scale-225 -ml-1">
-          <Image
-            src="/images/logo1.png"
-            alt="Arsenal Malmö logotyp"
-            fill
-            className="object-contain"
-          />
-          
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        
+        {/* Logotyp */}
+        <div className="flex justify-center md:justify-start w-full md:w-auto">
+          <div className="relative w-20 h-20 scale-225">
+            <Image
+              src="/images/logo1.png"
+              alt="Arsenal Malmö logotyp"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
 
         {/* Kontakt */}

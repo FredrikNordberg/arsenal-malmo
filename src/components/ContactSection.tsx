@@ -9,14 +9,14 @@ export default function ContactSection() {
           <h2 className="text-4xl font-bold text-center text-white mb-1">
             Kontakt
           </h2>
-          <div className="h-1 w-24 bg-[#44B154] mx-auto mb-6 rounded-full" />
+          <div className="h-1 w-24 bg-red-600 mx-auto mb-6 rounded-full" />
 
           {/* Grid layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mt-10">
             {/* Kontaktinfo */}
             <div className="h-[400px] space-y-6 text-sm md:text-base leading-relaxed bg-[#262626] border border-gray-700 rounded-lg p-6 shadow-sm overflow-y-auto">
               <div>
-                <p className="font-semibold text-[#44B154]">E-post:</p>
+                <p className="font-semibold text-red-600">E-post:</p>
                 <a
                   href="mailto:info@arsenalmalmo.se"
                   className="underline text-white"
@@ -26,14 +26,14 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <p className="font-semibold text-[#44B154]">Adress:</p>
+                <p className="font-semibold text-red-600">Adress:</p>
                 <p className="text-gray-300">
                   Hyllie Boulevard 59<br />215 37 Malmö
                 </p>
               </div>
 
               <div>
-                <p className="font-semibold text-[#44B154]">Instagram:</p>
+                <p className="font-semibold text-red-600">Instagram:</p>
                 <a
                   href="https://instagram.com/arsenal.malmo"
                   className="underline text-white"
@@ -44,7 +44,7 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <p className="font-semibold text-[#44B154]">Facebook:</p>
+                <p className="font-semibold text-red-600">Facebook:</p>
                 <a
                   href="https://facebook.com/ArsenalMalmo"
                   className="underline text-white"
@@ -71,7 +71,7 @@ export default function ContactSection() {
       </section>
 
       {/* Grön linje */}
-      <div className="w-full h-1 bg-[#44B154]" />
+      <div className="w-full h-1 bg-red-600" />
     </>
   );
 }

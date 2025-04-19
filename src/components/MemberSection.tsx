@@ -20,26 +20,26 @@ export default function MemberSection() {
 
           {/* Rubrik */}
           <h2 className="text-4xl font-bold text-center mb-1">Bli medlem</h2>
-          <div className="h-1 w-24 bg-[#44B154] mx-auto mb-12 rounded-full" />
+          <div className="h-1 w-24 bg-red-600 mx-auto mb-12 rounded-full" />
 
           {/* Förmåner */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="bg-[#262626] p-6 rounded-lg border border-gray-700 text-center">
-              <FaPercent className="text-[#44B154] text-4xl mb-4 mx-auto" />
+              <FaPercent className="text-red-600 text-4xl mb-4 mx-auto" />
               <h3 className="font-bold text-lg mb-2">Rabatter</h3>
               <p className="text-gray-300 text-sm">
                 20% hos Jacks Sport i Svedala, upp till 35% hos Minposter.se, samt fina deals på Drumbar.
               </p>
             </div>
             <div className="bg-[#262626] p-6 rounded-lg border border-gray-700 text-center">
-              <FaUsers className="text-[#44B154] text-4xl mb-4 mx-auto" />
+              <FaUsers className="text-red-600 text-4xl mb-4 mx-auto" />
               <h3 className="font-bold text-lg mb-2">Gemenskap</h3>
               <p className="text-gray-300 text-sm">
                 Matchträffar, medlemsresor, fester och chans att träffa andra gooners i Malmöområdet.
               </p>
             </div>
             <div className="bg-[#262626] p-6 rounded-lg border border-gray-700 text-center">
-              <FaSwatchbook className="text-[#44B154] text-4xl mb-4 mx-auto" />
+              <FaSwatchbook className="text-red-600 text-4xl mb-4 mx-auto" />
               <h3 className="font-bold text-lg mb-2">Souvenirer</h3>
               <p className="text-gray-300 text-sm">
                 Medlemmar får tillgång till vår webshop & får Arsenal Malmö-kortet som du kan visa upp.
@@ -98,7 +98,7 @@ export default function MemberSection() {
       </section>
 
       {/* Grön linje */}
-      <div className="w-full h-1 bg-[#44B154]" />
+      <div className="w-full h-1 bg-red-600" />
     </>
   );
 }

@@ -34,7 +34,7 @@ export default function Partners() {
       </h2>
 
       {/* Grön linje under rubrik */}
-      <div className="h-1 w-24 bg-[#44B154] mx-auto mb-12 rounded-full" />
+      <div className="h-1 w-24 bg-red-600 mx-auto mb-12 rounded-full" />
 
       {/* Partnerlogos */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-12">
@@ -59,14 +59,14 @@ export default function Partners() {
             {/* Röd linje under loggan vid hover */}
             <div className="h-1 w-0 bg-[#EF0107] mt-2 transition-all duration-300 group-hover:w-12 mx-auto rounded-full" />
 
-            <p className="mt-2 text-sm font-medium text-[#44B154] group-hover:text-white transition">
+            <p className="mt-2 text-sm font-medium text-red-600 group-hover:text-white transition">
               {partner.name}
             </p>
           </Link>
         ))}
       </div>
     </section>
-    <div className="w-full h-1 bg-[#44B154]" />
+    <div className="w-full h-1 bg-red-600" />
     </>
   );
 }

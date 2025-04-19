@@ -43,13 +43,14 @@ export default function AboutSection() {
   ];
   return (
     <>
+    <div className="w-full h-1 bg-red-600" />
       <section className="bg-[#1a1a1a] text-white py-20 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Rubrik */}
           <h2 className="text-4xl font-bold text-center text-white mb-1">
             Arsenal Malmö
           </h2>
-          <div className="h-1 w-24 bg-[#44B154] mx-auto mb-6 rounded-full" />
+          <div className="h-1 w-24 bg-red-600 mx-auto mb-6 rounded-full" />
 
           {/* Flex-layout */}
           <div className="flex flex-col md:flex-row gap-10 items-start">
@@ -87,7 +88,7 @@ export default function AboutSection() {
           </div>
         </div>
       </section>
-      <div className="w-full h-1 bg-[#44B154]" />
+      <div className="w-full h-1 bg-red-600" />
     </>
   );
 }

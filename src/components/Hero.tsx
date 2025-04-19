@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 const slides = [
   {
     id: 1,
-    image: "/images/medlem.jpg", 
+    image: "/images/medlem.jpg",
     title: "Bli medlem i Arsenal Malmö",
     text: "Få tillgång till evenemang, biljetter och gemenskap.",
     buttonText: "Läs mer",
@@ -25,6 +25,7 @@ const slides = [
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
+  const [showArrows, setShowArrows] = useState(true);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % slides.length);
@@ -34,9 +35,21 @@ export default function Hero() {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  // Hantera visning av pilar via CustomEvent
+  useEffect(() => {
+    const handleToggle = (e: CustomEvent) => {
+      setShowArrows(!e.detail); // e.detail = true → meny öppen → dölj pilar
+    };
+
+    window.addEventListener("menuToggle", handleToggle as EventListener);
+
+    return () => {
+      window.removeEventListener("menuToggle", handleToggle as EventListener);
+    };
+  }, []);
+
   return (
-    <>
-    <section className="relative w-full h-[500px] overflow-hidden">
+    <section className="relative w-full h-[500px] overflow-hidden z-0">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -51,10 +64,8 @@ export default function Hero() {
             className="object-cover"
             priority={index === current}
           />
-          <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-start px-12 md:px-20 py-10 text-white max-w-2xl space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              {slide.title}
-            </h2>
+          <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center md:items-start text-white px-4 md:px-8 md:ml-28 text-center md:text-left max-w-xl">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">{slide.title}</h2>
             <p className="text-lg mb-6">{slide.text}</p>
             <Link
               href={slide.buttonLink}
@@ -66,26 +77,26 @@ export default function Hero() {
         </div>
       ))}
 
-      {/* Vänsterpil */}
-      <button
-        onClick={prevSlide}
-        className="absolute top-1/2 left-4 -translate-y-1/2 z-50 bg-black/40 text-white p-3 rounded-full hover:bg-black/60 transition"
-        aria-label="Föregående"
-      >
-        ◀
-      </button>
-
-      {/* Högerpil */}
-      <button
-        onClick={nextSlide}
-        className="absolute top-1/2 right-4 -translate-y-1/2 z-50 bg-black/40 text-white p-3 rounded-full hover:bg-black/60 transition"
-        aria-label="Nästa"
-      >
-        ▶
-      </button>
-      
+      {/* Pilar visas bara om meny inte är öppen */}
+      {showArrows && (
+        <>
+          <button
+            onClick={prevSlide}
+            className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 z-10"
+            aria-label="Föregående"
+          >
+            ◀
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 z-10"
+            aria-label="Nästa"
+          >
+            ▶
+          </button>
+        </>
+      )}
     </section>
-    <div className="w-full h-1 bg-[#44B154]" />
-    </>
   );
 }
+
