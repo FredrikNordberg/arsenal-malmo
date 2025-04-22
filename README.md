@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arsenal Malmö – Custom Supporter Website
 
-## Getting Started
+Welcome to my custom-built version of the **Arsenal Malmö** supporter club website!  
+This is a modern, fast, and fully responsive web app built with **Next.js (App Router)** and **Tailwind CSS** – inspired by their current site, but completely reimagined to match my own design preferences and vision for a better digital experience.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 What is this?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project is a **personal redesign** of [Arsenal Malmö's](https://arsenalmalmo.se) official supporter club site. While it contains the same core content and spirit, I’ve taken full creative freedom to:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Improve layout and responsiveness
+- Add interactive elements like sliders and transitions
+- Create a custom, cleaner navigation system
+- Make the design more modern and Arsenal-inspired
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This is **not** an official rebuild, but a **fan-driven initiative** for learning, inspiration, and showcasing what's possible with modern web tools.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js 14+** (using App Router)
+- **React**
+- **Tailwind CSS**
+- **Framer Motion** (for animations)
+- **Vercel** (for deployment)
+- **TypeScript**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📱 Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 🔺 Full responsive design (desktop & mobile)
+- 🍔 Custom hamburger navigation
+- 🖼 Hero image slider with smooth transitions
+- 🎨 Custom Arsenal Malmö branding
+- 🧾 Member registration section with visuals
+- 📍 Contact page with embedded Google Maps
+- 📜 About/history section with dynamic layout
+- 🤝 Partner/sponsor display with hover effects
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🌐 Live Demo
+
+You can see the live site deployed on Vercel here:  
+👉 https://arsenal-malmo.vercel.app/
+
+---
+
+
+## ❤️ COYG!
+
